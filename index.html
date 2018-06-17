@@ -15,13 +15,21 @@
 	</style>
 </head>
 <body>
-	<p id="dateTime"></p>
-
-	<script>
-		var d = new Date();
-		document.getElementById("dateTime").innerHTML = d;
-	</script>
-
+	<div>
+		<p id="dateTime"></p>
+	
+		<script>
+			var d = new Date();
+	
+			var datestring = d.getDate()  + "-" +
+				(d.getMonth()+1) + "-" + 
+				d.getFullYear() + " " + 
+				d.getHours() + ":" + 
+				d.getMinutes();
+			
+			document.getElementById("dateTime").innerHTML = datestring;
+		</script>
+	</div>
 	</style>
 	<div class="pure-menu custom-restricted-width">
 		<span class="pure-menu-heading">Stations</span>
